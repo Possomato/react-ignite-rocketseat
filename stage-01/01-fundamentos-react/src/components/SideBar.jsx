@@ -1,5 +1,7 @@
 import React from "react"
 import { sidebar, profile, cover } from "./SideBar.module.css"
+import { PencilSimpleLine } from "phosphor-react"
+import Avatar from "./Avatar"
 
 export function SideBar() {
   return (
@@ -10,12 +12,15 @@ export function SideBar() {
       />
 
       <div className={profile}>
-        <img src="https://avatars.githubusercontent.com/u/123518333?v=4" />
+        <Avatar src="https://avatars.githubusercontent.com/u/123518333?v=4" />
         <strong>Gabriel Bonifacio Possomato</strong>
         <span>Web Developer</span>
       </div>
       <footer>
-        <a href="#">Editar seu perfil</a>
+        <a href="#">
+          <PencilSimpleLine size={20} />
+          Editar seu perfil
+        </a>
       </footer>
     </aside>
   )
